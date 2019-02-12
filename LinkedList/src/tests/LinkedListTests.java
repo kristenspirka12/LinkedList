@@ -20,4 +20,9 @@ public class LinkedListTests {
 		list.add("hobune");
 		assertEquals(list.size(), 1);
 	}
+	
+	@Test
+	public void addElementAddedToList() {
+		
+	}
 }
