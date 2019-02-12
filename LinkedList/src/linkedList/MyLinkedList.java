@@ -1,5 +1,6 @@
 package linkedList;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class MyLinkedList {
@@ -18,12 +19,19 @@ public class MyLinkedList {
 	}
 
 	public int size() {
-		return 0;
+		return size;
 	}
 
 	public void add(String string) {
-		array[size] = string;
 		size++;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "MyLinkedList [array=" + Arrays.toString(array) + ", size=" + size + "]";
 	}
 	
 	
