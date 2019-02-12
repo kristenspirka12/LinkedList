@@ -1,0 +1,11 @@
+-Tühja listi suurus on 0.
+-Lisades elemendi (add) suureneb listi suurus.
+
+-Lisades elemendi, peab see element listi lisanduma.
+	Näiteks saaks kontrollida seda meetodiga getFirst()
+	
+Lisamine indeksiga:
+	-lisab õigele kohale
+	-kui valele kohale lisada, saab erindi(indeksOutOfBound...)
+	-kui järjest samale indeksile, siis "lükkab" tagapool olevaid elemente edasi.
+	-kui viimasel indeksile, lisab lõppu.
