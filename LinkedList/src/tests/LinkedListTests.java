@@ -23,6 +23,11 @@ public class LinkedListTests {
 	
 	@Test
 	public void addElementAddedToList() {
-		
+		MyLinkedList list = new MyLinkedList();
+		list.add("rebane");
+		System.out.println(list);
+		assertEquals(list.getFirst(), "rebane");
 	}
+	
+	
 }
