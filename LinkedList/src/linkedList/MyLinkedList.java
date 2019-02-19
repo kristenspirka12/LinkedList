@@ -26,13 +26,16 @@ public class MyLinkedList {
 		size++;
 	}
 
+	public String getFirst() {
+		return null;
+	}
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "MyLinkedList [array=" + Arrays.toString(array) + ", size=" + size + "]";
+		return "MyLinkedList [size=" + size + ", array=" + Arrays.toString(array) + "]";
 	}
-	
 	
 }
