@@ -17,18 +17,44 @@ public class MyLinkedList {
 		for (int i = 0; i < Math.min(elements.length, ARRAY_LENGTH); i++) {
 			array[i] = elements[i];
 		}
+		size = elements.length;
 	}
 
 	public int size() {
 		return size;
 	}
-
-	public void add(String string) {
-		size++;
+	
+	public String get(int index) {
+		return array[index];
 	}
 
 	public String getFirst() {
-		return null;
+		return this.get(0);
+	}
+	
+	public String getLast() {
+		return this.get(this.size()-1);
+	}
+	
+	public void add(String item) {
+		array[size()] = item;
+		size++;
+	}
+	
+	public void add(int index, String item) {
+		if(size > 0) {
+			this.shiftRight(index, size-1);
+		} else {
+			this.shiftRight(index, size);
+		}
+		
+		array[index] = item;
+		size++;
+	}
+	
+	public void addAll() {
+		
+		size++;
 	}
 	
 	public void addElementTo(String element, int index ) {
@@ -53,9 +79,7 @@ public class MyLinkedList {
 		}
 	}
 	
-	public String get(int i) {
-		return null;
-	}
+	
 	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()

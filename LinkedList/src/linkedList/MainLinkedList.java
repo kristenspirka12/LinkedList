@@ -20,10 +20,10 @@ public class MainLinkedList {
 		
 		//tagurpidi läbikäimine
 		for (int i = array.length - 2; i >= 0; i--) {
-			System.out.println(array[i]);
+			//System.out.println(array[i]);
 			//"nihutamine" paremale
 			array[i+1] = array[i];
 		}
-		System.out.println(Arrays.toString(array));
+		//System.out.println(Arrays.toString(array));
 	}
 }
