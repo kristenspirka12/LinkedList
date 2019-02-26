@@ -29,5 +29,20 @@ public class LinkedListTests {
 		assertEquals(list.getFirst(), "rebane");
 	}
 	
+//	@Test
+//	public void shiftRightCorrectElements() {
+//		MyLinkedList list = new MyLinkedList();
+//		list.add("esimene");
+//		list.add("teine");
+//		list.add("kolmas");
+//		list.shiftRight(1, 2);
+//		//assertEquals(list.get(2), "teine");
+//		//assertEquals(list.get(3), "kolmas");
+//	}
 	
+	@Test(expected = IllegalArgumentException.class)
+	public void shiftRightCorrectElements() {
+		MyLinkedList list = new MyLinkedList();
+		list.shiftRight(1, 0);
+	}
 }
