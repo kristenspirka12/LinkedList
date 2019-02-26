@@ -28,14 +28,14 @@ public class LinkedListTests {
 	
 	@Test
 	public void getFirstReturnRightElement() {
-		MyLinkedList list = new MyLinkedList("yks", "kaks", "kolm");
-		assertEquals(list.get(1), "kaks");
+		MyLinkedList list = new MyLinkedList("yks", "kaks");
+		assertEquals(list.getFirst(), "yks");
 	}
 	
 	@Test
 	public void getLastReturnRightElement() {
-		MyLinkedList list = new MyLinkedList("yks", "kaks", "kolm");
-		assertEquals(list.get(1), "kaks");
+		MyLinkedList list = new MyLinkedList("yks", "kaks");
+		assertEquals(list.getLast(), "kaks");
 	}
 	
 	@Test
@@ -69,9 +69,9 @@ public class LinkedListTests {
 	@Test
 	public void addedWithIndexOthersShifted() {
 		MyLinkedList list = new MyLinkedList("yks", "kaks");
-		System.out.println("Enne lisamist");
 		list.add(0, "uusYks");
 		assertEquals(list.getFirst(), "uusYks");
+		assertEquals(list.get(1), "yks");
 	}
 	
 //	@Test
