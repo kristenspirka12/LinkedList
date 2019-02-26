@@ -57,6 +57,7 @@ public class MyLinkedList {
 		size++;
 	}
 	
+	/********************************************/
 	public void addElementTo(String element, int index ) {
 		array[index] = element;
 	}
