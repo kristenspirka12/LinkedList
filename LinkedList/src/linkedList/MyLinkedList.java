@@ -5,17 +5,18 @@ import java.util.List;
 
 public class MyLinkedList {
 
-	private String[] array;
-	private int size;
+	public static final int ARRAY_LENGTH = 100;
+	private String[] array = new String[ARRAY_LENGTH];
+	private int size = 0;
 
 	// Constructor
-	public MyLinkedList() {
-		array = new String[100];
-	}
+	public MyLinkedList() {}
 
 	// Constructor with parameter
-	public MyLinkedList(List<String> list) {
-		
+	public MyLinkedList(String... elements) {
+		for (int i = 0; i < Math.min(elements.length, ARRAY_LENGTH); i++) {
+			array[i] = elements[i];
+		}
 	}
 
 	public int size() {
