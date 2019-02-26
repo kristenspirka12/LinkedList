@@ -15,6 +15,12 @@ public class LinkedListTests {
 	}
 	
 	@Test
+	public void createdListWithParameterHasElements() {
+		MyLinkedList list = new MyLinkedList();
+		assertEquals(list.size(), 0);
+	}
+	
+	@Test
 	public void addIncreaseListSize() {
 		MyLinkedList list = new MyLinkedList();
 		list.add("hobune");
