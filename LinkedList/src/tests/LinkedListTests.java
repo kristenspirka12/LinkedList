@@ -74,6 +74,53 @@ public class LinkedListTests {
 		assertEquals(list.get(1), "yks");
 	}
 	
+	@Test
+	public void addAllRightElemsInCorrectPosition() {
+		MyLinkedList list = new MyLinkedList("yks");
+		list.addAll("kaks", "kolm");
+		assertEquals(list.get(1), "kaks");
+		assertEquals(list.getLast(), "kolm");
+	}
+	
+	@Test
+	public void addAllIncreaseSize() {
+		MyLinkedList list = new MyLinkedList("yks");
+		list.addAll("kaks", "kolm");
+		assertEquals(list.size(), 3);
+	}
+	
+	@Test
+	public void addAllWithIncreaseSize() {
+		MyLinkedList list = new MyLinkedList("yks");
+		list.addAll(0, "kaks", "kolm");
+		assertEquals(list.size(), 3);
+	}
+	
+	@Test
+	public void addAllWithIndexRightElemsInCorrectPosition() {
+		MyLinkedList list = new MyLinkedList("esimene", "neljas");
+		list.addAll(1, "teine", "kolmas");
+//		System.out.println(list);
+		assertEquals(list.getFirst(), "esimene");
+		assertEquals(list.get(1), "teine");
+		assertEquals(list.get(2), "kolmas");
+		assertEquals(list.getLast(), "neljas");		
+	}
+	
+	@Test
+	public void addFirstIncreaseSize() {
+		MyLinkedList list = new MyLinkedList("yks");
+		list.addFirst("uus yks");
+		assertEquals(list.size(), 2);
+	}
+	
+	@Test
+	public void addFirstRightElemToCorrectPosition() {
+		MyLinkedList list = new MyLinkedList("yks");
+		list.addFirst("uus yks");
+		assertEquals(list.getFirst(), "uus yks");
+	}
+	
 //	@Test
 //	public void shiftRightCorrectElements() {
 //		MyLinkedList list = new MyLinkedList();
