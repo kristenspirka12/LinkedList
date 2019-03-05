@@ -58,7 +58,12 @@ public class MyLinkedList {
 	public void addAll(int index, String... elements) {
 		for (String element : elements) {
 			add(index, element);
+			index++;
 		}
+		
+		/*for (int i = elements.length-1; i >= 0; i--) {
+			add(index, elements[i]);
+		}*/
 	}
 	
 	/********************************************/
