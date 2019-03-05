@@ -25,5 +25,11 @@ public class MainLinkedList {
 			array[i+1] = array[i];
 		}
 		//System.out.println(Arrays.toString(array));
+		
+		
+		// addAll("üks", "kaks")
+		// add("üks")
+		// add("kaks")
 	}
+	
 }

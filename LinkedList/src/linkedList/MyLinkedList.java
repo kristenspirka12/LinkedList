@@ -37,24 +37,29 @@ public class MyLinkedList {
 	}
 	
 	public void add(String item) {
-		array[size()] = item;
-		size++;
+		add(size, item);
+	}
+	
+	public void addFirst(String item) {
+		add(0, item);
 	}
 	
 	public void add(int index, String item) {
-		if(size > 0) {
-			this.shiftRight(index, size-1);
-		} else {
-			this.shiftRight(index, size);
-		}
-		
+		this.shiftRight(index, size);
 		array[index] = item;
 		size++;
 	}
 	
-	public void addAll() {
-		
-		size++;
+	public void addAll(String... elements) {
+		for (String element : elements) {
+			add(element);
+		}
+	}
+	
+	public void addAll(int index, String... elements) {
+		for (String element : elements) {
+			add(index, element);
+		}
 	}
 	
 	/********************************************/
@@ -79,8 +84,6 @@ public class MyLinkedList {
 			array[i-1] = array[i];
 		}
 	}
-	
-	
 	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
