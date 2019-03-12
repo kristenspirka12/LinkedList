@@ -110,7 +110,9 @@ public class MyLinkedList {
 	}
 	
 	public void removeFirstOccurrence(String item) {
-		
+		if(conteins(item)) {
+			remove(indexOf(item));			
+		}
 	}
 	
 	public void remove(int index) {
