@@ -66,6 +66,58 @@ public class MyLinkedList {
 		}*/
 	}
 	
+	public void clear() {
+		size = 0;
+	}
+	
+	public boolean conteins(String item) {
+		return indexOf(item) > -1;
+		/*for (int i = 0; i < size; i++) {
+			if(get(i).equals(item)) {
+				return true;
+			}
+		}
+		return false;*/
+	}
+	
+	public int indexOf(String item) {
+		for (int i = 0; i < size; i++) {
+			if (get(i).equals(item)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	public String poll() {
+		String first = getFirst();
+		remove();
+		return first;
+	}
+	
+	public String pollLast() {
+		String last = getLast();
+		removeLast();
+		return last;
+	}
+	
+	public void remove() {
+		remove(0);
+	}
+	
+	public void removeLast() {
+		remove(size-1);
+	}
+	
+	public void removeFirstOccurrence(String item) {
+		
+	}
+	
+	public void remove(int index) {
+		shiftLeft(index+1, size);
+		size--;
+	}
+	
 	/********************************************/
 	public void addElementTo(String element, int index ) {
 		array[index] = element;

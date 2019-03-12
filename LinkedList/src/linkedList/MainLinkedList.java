@@ -9,7 +9,7 @@ public class MainLinkedList {
 		System.out.println(llistobj); */
 		int[] array = new int[] {5, 6, 7, 0, 0};
 		
-		MyLinkedList lList = new MyLinkedList("yks", "kaks");
+		MyLinkedList lList = new MyLinkedList("yks", "kaks", "kolm");
 //		lList.setArray(new String[] {"yks", "kaks", "kolm", "neli", "-", "-", "-"});
 //		lList.shiftRight(1, 3);
 //		lList.addElementTo("uusKaks", 1);
