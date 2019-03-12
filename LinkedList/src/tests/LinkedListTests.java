@@ -121,6 +121,97 @@ public class LinkedListTests {
 		assertEquals(list.getFirst(), "uus yks");
 	}
 	
+	@Test
+	public void elementContainsInList() {
+		MyLinkedList list = new MyLinkedList("yks", "kaks");
+		assertEquals(list.conteins("kaks"), true);
+	}
+	
+	@Test
+	public void elementNotContainsInList() {
+		MyLinkedList list = new MyLinkedList("yks", "kaks");
+		assertEquals(list.conteins("kolm"), false);
+	}
+	
+	@Test
+	public void indexOfElementInList() {
+		MyLinkedList list = new MyLinkedList("yks", "kaks");
+		assertEquals(list.indexOf("kaks"), 1);
+	}
+	
+	@Test
+	public void indexOfElementNotInList() {
+		MyLinkedList list = new MyLinkedList("yks", "kaks");
+		assertEquals(list.indexOf("kolm"), -1);
+	}
+	
+	@Test
+	public void pollReturnsFirstElement() {
+		MyLinkedList list = new MyLinkedList("yks", "kaks");
+		assertEquals(list.poll(), "yks");
+	}
+	
+	@Test
+	public void pollRemovesFirstElement() {
+		MyLinkedList list = new MyLinkedList("yks", "kaks");
+		list.poll();
+		assertEquals(list.size(), 1);
+		assertEquals(list.getFirst(), "kaks");
+	}
+	
+	@Test
+	public void removeTakesFirstElement() {
+		MyLinkedList list = new MyLinkedList("yks", "kaks");
+		list.remove();
+		assertEquals(list.size(), 1);
+		assertEquals(list.getFirst(), "kaks");
+	}
+	
+	@Test
+	public void removeWithIndexFirstRightPosition() {
+		MyLinkedList list = new MyLinkedList("yks", "kaks", "kolm");
+		list.remove(0);
+		assertEquals(list.size(), 2);
+		assertEquals(list.getFirst(), "kaks");
+		assertEquals(list.getLast(), "kolm");
+	}
+	
+	@Test
+	public void removeWithIndexMiddleRightPosition() {
+		MyLinkedList list = new MyLinkedList("yks", "kaks", "kolm");
+		list.remove(1);
+		assertEquals(list.size(), 2);
+		assertEquals(list.getFirst(), "yks");
+		assertEquals(list.getLast(), "kolm");
+	}
+	
+	@Test
+	public void removeLastCorrectElement() {
+		MyLinkedList list = new MyLinkedList("yks", "kaks", "kolm");
+		list.removeLast();
+		assertEquals(list.size(), 2);
+		assertEquals(list.getFirst(), "yks");
+		assertEquals(list.getLast(), "kaks");
+	}
+	
+	@Test
+	public void removeFirstOccurrenceCorrectElement() {
+		MyLinkedList list = new MyLinkedList("kass", "hiir", "koer", "hiir");
+		list.removeFirstOccurrence("hiir");
+		assertEquals(list.size(), 3);
+		assertEquals(list.getFirst(), "kass");
+		assertEquals(list.get(1), "koer");
+		assertEquals(list.getLast(), "hiir");
+	}
+	
+	@Test
+	public void removeFirstOccurrenceNoSuchElement() {
+		MyLinkedList list = new MyLinkedList("kass");
+		list.removeFirstOccurrence("hiir");
+		assertEquals(list.size(), 1);
+		assertEquals(list.getFirst(), "kass");
+	}
+	
 //	@Test
 //	public void shiftRightCorrectElements() {
 //		MyLinkedList list = new MyLinkedList();
